@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Source+Sans+3:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>DIF Página</title>
+  </head>
+  <div class="container-5">
+    <nav>
+      <a id="miCuentaLink" class="index-element-leading-item" href="login.html"
+        >REGRESAR A INICIO DE SESIÓN</a
+      >
+      <img src="mejor-logo.png" class="logo-1" />
+    </nav>
+    <div id="content11">
+      <div><img src="escudo-atz.webp" class="cuenta-imagen" /></div>
+    </div>
+    <div id="content12">
+      <table class="general-account-info">
+        <tr class="data-table">
+          <td>
+            <div id="nombre-comensal">
+              Aquí va nombre completo del responsable.
+            </div>
+          </td>
+        </tr>
+        <tr class="data-table">
+          <td>
+            <div id="id-comensal">Aquí va el id.</div>
+          </td>
+        </tr>
+        <tr class="data-table">
+          <td><div>Responsable</div></td>
+        </tr>
+      </table>
+    </div>
+    <div id="content13">
+      <div id="inventario">
+        <h2 class="account-header">Control de inventarios</h2>
+      </div>
+      <div id="avisos">
+        <form id="avisos-form">
+          <div class="container">
+            <h2 class="account-header">Aviso</h2>
+            <p>
+              Si deseas mandar un aviso a la aplicación sobre cualquier
+              situación o incidente en el comedor del que eres responsable,
+              llena este formulario.
+            </p>
+            <hr />
+
+            <label for="id"><b>Introduce el ID del comedor.</b></label>
+            <input class="admin-txt-input" type="text" id="idComd" required />
+
+            <label for="aviso"
+              ><b>Escribe aquí el aviso que deseas mandar.</b></label
+            >
+            <input type="text" name="aviso" id="aviso" required />
+
+            <hr />
+
+            <button
+              type="submit"
+              class="afeccionbtn"
+              onclick="handleAvisos(event)"
+            >
+              MANDAR
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</html>
