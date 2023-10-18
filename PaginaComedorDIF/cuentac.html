@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.jpeg" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Source+Sans+3:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="style.css" rel="stylesheet" />
+    <title>DIF Página</title>
+  </head>
+  <div class="container-5">
+    <nav>
+      <a class="index-element-leading-item" href="index.html"
+        >REGRESAR A PÁGINA PRINCIPAL</a
+      >
+      <img src="mejor-logo.png" class="logo-1" />
+    </nav>
+    <div id="content11">
+      <div><img src="escudo-atz.webp" class="cuenta-imagen" /></div>
+    </div>
+    <div id="content12">
+      <table class="general-account-info">
+        <tr class="data-table">
+          <td>
+            <div id="nombre-comensal">
+              Aquí va nombre completo del comensal.
+            </div>
+          </td>
+        </tr>
+        <tr class="data-table">
+          <td>
+            <div id="id-usuario">Aquí va el id.</div>
+          </td>
+        </tr>
+        <tr class="data-table">
+          <td><div>Comensal</div></td>
+        </tr>
+      </table>
+    </div>
+    <div id="content13">
+      <button id="edit-profile" onclick="toggleForms()">
+        OPCIONES DE PERFIL
+      </button>
+      <div id="account-form">
+        <form style="display: none">
+          <div class="container">
+            <h2 class="account-header">Registrar afección</h2>
+            <br />
+            <p>
+              Hacernos saber sobre alguna afección de la que padezcas nos
+              ayudaría a brindarte un mejor servicio. Se pueden agregar
+              múltiples.
+            </p>
+            <hr />
+
+            <table class="styled-table">
+              <thead>
+                <tr>
+                  <th>Número</th>
+                  <th>Afección</th>
+                  <th>Número</th>
+                  <th>Afección</th>
+                  <th>Número</th>
+                  <th>Afección</th>
+                  <th>Número</th>
+                  <th>Afección</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Artritis</td>
+                  <td>6</td>
+                  <td>Embarazo</td>
+                  <td>11</td>
+                  <td>Protesis</td>
+                  <td>16</td>
+                  <td>Enfermedad Cardiovascular</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Ceguera</td>
+                  <td>7</td>
+                  <td>Lactancia</td>
+                  <td>12</td>
+                  <td>Violencia</td>
+                  <td>17</td>
+                  <td>Epilepsia</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Diabetes</td>
+                  <td>8</td>
+                  <td>Tercera edad</td>
+                  <td>13</td>
+                  <td>Desempleo</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Sordera</td>
+                  <td>9</td>
+                  <td>Hipertensión</td>
+                  <td>14</td>
+                  <td>Inmigrante</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Uso de silla de ruedas</td>
+                  <td>10</td>
+                  <td>Uso de apoyo para movilidad</td>
+                  <td>15</td>
+                  <td>Situación de calle</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <label for="id"><b>ID</b></label>
+            <input
+              class="admin-txt-input"
+              type="text"
+              id="id"
+              placeholder="Ingresa tu ID"
+              required
+            />
+            <div id="idError" class="error-message"></div>
+
+            <label for="nuevaAfeccion"><b>Número de la afección.</b></label>
+            <input
+              type="text"
+              name="nuevaAfeccion"
+              id="nuevaAfeccion"
+              placeholder="1-17"
+              required
+            />
+
+            <hr />
+
+            <button
+              type="submit"
+              class="afeccionbtn"
+              onclick="handleAfeccion(event)"
+            >
+              REGISTRAR
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="cuentac.js"></script>
+</html>
