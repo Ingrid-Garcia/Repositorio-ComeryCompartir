@@ -269,7 +269,7 @@ app.post('/admin', async (req, res) =>{
 });
 
 app.post('/cont', async (req, res) =>{
-    //Recupración de contraseña usando el CURP: Responsable/Comensal
+    //Restablecimiento de contraseña usando el CURP: Responsable/Comensal
     const { CURP, newPass } = req.body;
     console.log(req.body);
     try {
