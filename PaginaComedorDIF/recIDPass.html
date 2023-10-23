@@ -1,0 +1,103 @@
+<!--  
+  Página donde se incluye el formulario para poder recuperar el ID de un comensal y
+  restablecer su contraseña.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.jpeg" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:400,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Source+Sans+3:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>DIF Página</title>
+  </head>
+
+  <div class="container-2">
+    <nav>
+      <a id="miCuentaLink" class="index-element-leading-item" href="login.html"
+        >MI CUENTA</a
+      >
+      <a class="index-element-item" href="index.html">SOBRE ESTÁ INICIATIVA</a>
+      <a class="index-element-item" href="mapa.html">MAPA</a>
+      <img src="mejor-logo.png" class="logo-1" />
+    </nav>
+    <div id="content10">
+      <form id="registro-form">
+        <div class="container">
+          <h1 style="margin-bottom: 1%">
+            Restablecimiento y recuperación de datos.
+          </h1>
+          <p>Por favor proporciona tu CURP para continuar con el proceso.</p>
+          <hr />
+
+          <label for="curp"><b>CURP</b></label>
+          <input
+            type="text"
+            name="curp"
+            id="curp"
+            placeholder="Ingresa tu CURP."
+            required
+          />
+          <div id="curpErrorr" class="error-message"></div>
+
+          <label for="contraseña"
+            ><b>Restablecer contraseña (OPCIONAL)</b></label
+          >
+          <input
+            type="password"
+            name="contraseña"
+            id="contraseña"
+            placeholder="Ingresa tu nueva contraseña."
+          />
+          <div id="curpErrorr" class="error-message"></div>
+
+          <hr />
+
+          <button
+            type="submit"
+            class="recuperacionbtn"
+            onclick="handleSubmit(event)"
+          >
+            ENVIAR
+          </button>
+        </div>
+
+        <div class="signin">
+          <p><a href="login.html">Regresar a inicio de sesión.</a></p>
+        </div>
+      </form>
+
+      <div id="idModal" class="modal">
+        <div class="modal-content animate">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <div>
+            El ID de tu cuenta es
+            <span id="generatedId"></span>
+            <span id="passRecuperada"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <div>
+        <img src="empty-user.webp" width="100px" height="100px" />
+      </div>
+      <a href="login.html">Iniciar sesión</a>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</html>
